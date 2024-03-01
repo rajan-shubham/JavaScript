@@ -140,3 +140,30 @@ console.log(johnBmi);
 
 let marksHigherBMI = marksBmi > johnBmi;
 console.log(marksHigherBMI);*/
+
+/*
+//////////////////////////////////////////////
+// LEC ->017 {STRING & TEMPLETE LITERALS}
+
+const firstName = "Jonas";
+const job = "teacher";
+const birthYear = 1991;
+const year = 2037;
+
+const jonas = "I'm " + firstName + ', a ' + (year - birthYear) + ' year old ' + job + '!';
+console.log(jonas);
+
+const jonasNew = `I'm ${firstName}, a ${year - birthYear} year old ${job}!`;
+console.log(jonasNew);
+
+console.log(`Just a regular string...`);
+
+// multiline string before ES6
+console.log('String with \n\
+multiple \n\
+lines');
+// multiline string after ES6
+console.log(`String
+with
+multiple
+line`);*/

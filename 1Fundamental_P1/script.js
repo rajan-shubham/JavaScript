@@ -221,3 +221,32 @@ if (marksBmi > johnBmi) {
 } else {
     console.log(`Jons's BMI (${johnBmi}) is higher than Mark's (${marksBmi})!`);
 }*/
+
+////////////////////////////////////
+//LEC --> 020 {TYPE CONVERSION & COERCION}
+// type conversion -> when we mannualy convert from one type to another.
+// type coercion -> when JS automatically converts one type to another
+/*
+//type conversion
+const inputYear = `1991`;
+console.log(Number(inputYear),inputYear);
+console.log(Number(inputYear) + 18);
+
+console.log(Number(`Jonas`))// o.p-> Not a Number
+console.log(typeof (NaN));
+console.log(String(23), 23);
+
+//type coercion
+console.log(`i'm ` + 23 + ` years old`);// String+Number -> String
+console.log(`I'm ` + String(23) + ` years old.`);
+console.log(`23` - `10` - 3); // - trigger in opposite way of + operator
+console.log(`23` * `2`);
+console.log(`23` / `2`);
+console.log('23' > '18');
+
+let n = '1' + 1;
+n = n - 1;
+console.log(n); // -> 10
+console.log(2 + 3 + 4 + '5');// -> 95
+
+console.log('10' - '4' - '3' - 2 + '5'); //-> 15*/

@@ -275,3 +275,36 @@ if (height) {
 } else {
     console.log("Height is UNDEFINED ");
 }*/
+/*
+////////////////////////////////////////
+//LEC --> 022 {EQUALITY OPERATORS == VS ===}
+
+const age = '18';
+if (age === 18) console.log("You just became an adult.(strict)");
+if (age == 18) console.log("You just became an adult.(loose)");
+
+// === : is strict comp. equality operator, and does not perform type coercion
+
+console.log(18 === 18, 18 === 19); // true , false
+// == : is loose comp. equality operator, and does type coercion 
+console.log('18' == 18, '18' === 18); // true , false
+// loose equality (create many bugs so generally avoide it)
+
+const favourite = Number(prompt("What's your favourite number?"));
+console.log(favourite);
+console.log(typeof (favourite));
+
+if (favourite === 23) { // if '23' == 23 --> true
+    console.log('Cool! 23 is an amazing number!');
+} else if (favourite === 7) {
+    console.log('7 is also a cool number')
+} else if (favourite === 9) {
+    console.log('9 is also a cool number')
+} else {
+    console.log('Number is not 23 or 7 or 9');
+}
+
+// != : loose not equal to; !== : strict not equal to
+if (favourite !== 23) {
+    console.log('Why not the 23?');
+}*/

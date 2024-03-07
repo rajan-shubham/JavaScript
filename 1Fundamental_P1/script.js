@@ -308,3 +308,13 @@ if (favourite === 23) { // if '23' == 23 --> true
 if (favourite !== 23) {
     console.log('Why not the 23?');
 }*/
+/*
+/////////////////////////////////////////////
+//LEC -> 023 {BOOLEAN LOGIC}
+//BOOLEAN LOGIC -> uses true and false to solve complex logical problem
+const age = 16;
+if (age >= 20 || age < 30) {
+    console.log("Sarah age is in adult.");
+}
+
+console.log(!0);*/

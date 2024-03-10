@@ -412,3 +412,63 @@ if (dolphinAvgScore2 > koalasAvgScore2 && dolphinAvgScore2 >= 100) {
 } else {
     console.log("No team win the game.")
 }*/
+/*
+///////////////////////////////////////////
+//LEC -->026 {SWITCH STATEMENT}
+
+const day = "monday";
+
+switch (day) {
+    case "monday": // day === 'monday'
+        console.log("Plan course strucrture");
+        console.log("Go to coding meetup");
+        break;
+    case "tuesday":
+        console.log("Prepare theory videos");
+        break;
+    case "wednesday":
+    case "thursday":
+        console.log("Write code examples");
+        break;
+    case "friday":
+        console.log("Record videos");
+        break;
+    case "saturday":
+    case "sunday":
+        console.log("Enjoy the weekend :D");
+        break;
+    default:
+        console.log("Not a valid day!");
+}
+
+if (day === 'monday') {
+    console.log('Plan course structure');
+    console.log('Go to coding meetup');
+} else if (day === 'tuesday') {
+    console.log('Prepare theory videos');
+} else if (day === 'wednesday' || day === 'thursday') {
+    console.log('Write code examples');
+} else if (day === 'friday') {
+    console.log('Record videos');
+} else if (day === 'saturday' || day === 'sunday') {
+    console.log('Enjoy the weekend :D');
+} else {
+    console.log('Not a valid day!');
+}
+*/
+///////////////////////////////////////////
+//LEC -->27 {statemnets & expressions}
+
+// Expression --> it a piece of code that produces a value
+// ex: 3 + 4;
+// 1991; this is a value (but this is expression as it produce value)
+// ex: true && false && !false; --> produce boolean value
+
+// Statement --> it is a big piece of code which executed & not produces value on itself
+/*
+if (23 > 10) {// if else statement
+    const str = "23 is bigger"; // str is expression
+}
+
+const me = 'aman';
+console.log(`I'm ${2037 - 1991} years old ${me}`);*/

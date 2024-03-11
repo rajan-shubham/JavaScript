@@ -472,3 +472,25 @@ if (23 > 10) {// if else statement
 
 const me = 'aman';
 console.log(`I'm ${2037 - 1991} years old ${me}`);*/
+
+//////////////////////////////////////////////
+//LEC --> 028 {CONDITIONAL(TERNARY) OPERATOR}
+
+//conditional operator --> allow us to write similar to an if else statement but all in one line
+
+const age = 23;
+age >= 18 ? console.log("I like to drink wine 🍷") : console.log("I like to drink water💧.")
+// operater always produces a value(as it is an expression) like here ternary operator.
+
+const drink = age >= 18 ? 'wine🍷' : 'water💧';
+console.log(drink);
+
+let drink2;
+if (age >= 18) {
+    drink2 = 'wine🍷';
+} else {
+    drink2 = 'water💧';
+}
+console.log(drink2);
+
+console.log(`I like to drink ${age >= 18 ? 'wine🍷' : 'water💧'}.`);

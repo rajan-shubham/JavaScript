@@ -214,3 +214,45 @@ console.log(age1, age2, age3);
 
 const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
 console.log(ages);*/
+
+// var x = 20;
+// function foo() {
+//     console.log(x);
+//     let x = 10;
+// }
+// foo();
+
+///////////////////////////////////////////////
+// Lec --> 040 basic array operation(methods)
+/*
+const friends = ['Michael', 'Steven', 'Peter'];
+
+// Add Element
+const newLength = friends.push('Jay');
+console.log(friends); // ['Michael', 'Steven', 'Peter', 'Jay']
+
+friends.unshift('John');
+console.log(friends); // ['John', 'Michael', 'Steven', 'Peter', 'Jay']
+
+
+// Remove Elem.
+friends.pop(); // Last
+const popped = friends.pop();
+console.log(popped);
+console.log(friends);
+
+friends.shift(); // First
+console.log(friends);
+
+// Find
+console.log(friends.indexOf('Steven')); // 1
+console.log(friends.indexOf('Bob')); // -1
+
+friends.push(23);
+console.log(friends.includes('Steven')); // true
+console.log(friends.includes('Bob')); // false
+console.log(friends.includes('23')); // false as include cheks with strict equality (===)
+
+if (friends.includes('Steven')) {
+    console.log("You have friend called Steven")
+}*/

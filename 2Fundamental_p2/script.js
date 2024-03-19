@@ -296,3 +296,25 @@ console.log(tips); // (3) [18.75, 111, 8.8]
 
 const total = [(bills[0] + tips[0]), (bills[1] + tips[1]), (bills[bills.length - 1] + tips[tips.length - 1])];
 console.log(total); // (3) [143.75, 666, 52.8] */
+
+////////////////////////////////////////
+//LEC --> 042 {INTRO. TO OBJECTS}
+/*
+const jonasArray = [
+    'Jonas',
+    'Schmedtmann',
+    2037 - 1991,
+    'teacher',
+    ['Michael', 'Peter', 'Steven']
+];
+
+// object literal syntax
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    age: 2037 - 1991,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven']
+}
+*/
+// this object jonas has 5 property (property firstName which has value 'Jonas' & like wise all)

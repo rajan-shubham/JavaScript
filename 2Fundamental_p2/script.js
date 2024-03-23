@@ -318,3 +318,43 @@ const jonas = {
 }
 */
 // this object jonas has 5 property (property firstName which has value 'Jonas' & like wise all)
+
+////////////////////////////////////////////
+// LEC --> 043 (DOT VS. BRACKET NOTATION)
+
+console.log('HELLO NODE');
+// dot & bracket notation in JS used to assign and retrieve data from object
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    age: 2037 - 1991,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven']
+};
+console.log(jonas);
+
+console.log(jonas.firstName);
+console.log(jonas['lastName']);
+// in [] notation we can put any expression we would like
+
+const nameKey = 'Name';
+console.log(jonas['first' + nameKey]);
+console.log(jonas['last' + nameKey]);
+
+//console.log(jonas.'last' + nameKey); --> wrong way
+
+const interestedIn = prompt('What do you want to know about Jonas? Choose between firstName, lastName, age, job, and friends');
+
+if (jonas[interestedIn]) {
+  console.log(jonas[interestedIn]);
+} else {
+  console.log('Wrong request! Choose between firstName, lastName, age, job, and friends');
+}
+
+jonas.location = 'Portugal';
+jonas['twitter'] = '@jonasschmedtman';
+console.log(jonas);
+
+// challenge
+// "Jonas has 3 friends, and his best friend is called Michael"
+console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);

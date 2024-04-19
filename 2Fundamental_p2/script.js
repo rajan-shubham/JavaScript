@@ -358,3 +358,10 @@ console.log(jonas);
 // challenge
 // "Jonas has 3 friends, and his best friend is called Michael"
 console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
+
+const makaut = {
+    name : 'maulana abul kalam azad university of technology',
+    typeOfCollege : 'university',
+    establish : 2000,
+    affilatedCollegeNo : 200
+};

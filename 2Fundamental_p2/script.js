@@ -365,3 +365,9 @@ const makaut = {
     establish : 2000,
     affilatedCollegeNo : 200
 };
+
+// javascript arrays
+const cars = [];
+cars[0]= "Saab";
+cars[1]= "Volvo";
+cars[2]= "BMW";

@@ -371,3 +371,9 @@ const cars = [];
 cars[0]= "Saab";
 cars[1]= "Volvo";
 cars[2]= "BMW";
+
+if ( 14 >= 13) {
+    sonsol.log(`14 is greater`);
+}else{
+    sonsol.log(`14 is smaller`);
+}

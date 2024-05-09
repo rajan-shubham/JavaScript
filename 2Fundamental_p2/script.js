@@ -373,9 +373,9 @@ cars[1]= "Volvo";
 cars[2]= "BMW";
 
 if ( 14 >= 13) {
-    sonsol.log(`14 is greater`);
+    consol.log(`14 is greater`);
 }else{
-    sonsol.log(`14 is smaller`);
+    consol.log(`14 is smaller`);
 }
 
 ///////////////////////////////////////////////
@@ -405,6 +405,7 @@ const jonas = {
 
     getSummery: function () {
         return `${this.firstName} is a ${this.calcAge()}-year old ${jonas.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license.`
+    }
 };
 
 // const calcAge = function(birthYear) {
@@ -547,3 +548,6 @@ for (let i = 0; i < jonas.length; i++) {
 
   console.log(jonas[i], typeof jonas[i]);
 }*/
+
+// this keyword or this variable --> is basically equal to the object on which the method is called
+// in other words it's equal to the object calling the method

@@ -15,10 +15,26 @@
 console.log(document.querySelector('.message').textContent);
 
 // LEC --> 72 {SELECTING & MANIPULATING ELEMENTS}
-document.querySelector('.message').textContent = "🎉 Correct Number!";
+/*document.querySelector('.message').textContent = "🎉 Correct Number!";
 
 document.querySelector('.number').textContent = 13;
 document.querySelector('.score').textContent = 10;
 
 document.querySelector('.guess').value = 23
 console.log(document.querySelector('.guess').value);
+*/
+// lec --> 73 {Handeling click events}
+
+// document.querySelector('.check').addEventListener('click', function () {
+//     console.log(document.querySelector('.guess').value);
+
+//     document.querySelector('.message').textContent = "🎉 Correct Number!";
+// })
+document.querySelector('.check').addEventListener('click', function () {
+    const guess = Number(document.querySelector('.guess').value);
+    console.log(guess, typeof guess);
+
+    if (!guess) {
+        document.querySelector('.message').textContent = '⛔️ No Number!'
+    }
+})

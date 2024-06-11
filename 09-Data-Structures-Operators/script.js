@@ -31,6 +31,51 @@ const restaurant = {
   }
 };
 
+/////////////////////////////////////////////////
+// lec -> 104 {Destructuring Object}
+const { name, openingHours, categories } = restaurant;
+console.log(name, openingHours, categories);
+
+const {
+  name: restaurantName,
+  openingHours: hours,
+  categories: tags,
+} = restaurant;
+console.log(restaurantName, hours, tags);
+
+// Default values
+const { menu = [], starterMenu: starters = [] } = restaurant;
+console.log(menu, starters);
+/* above code o/p:
+Classico Italiano {
+  thu: { open: 12, close: 22 },
+  fri: { open: 11, close: 23 },
+  sat: { open: 0, close: 24 }
+} [ 'Italian', 'Pizzeria', 'Vegetarian', 'Organic' ]
+Classico Italiano {
+  thu: { open: 12, close: 22 },
+  fri: { open: 11, close: 23 },
+  sat: { open: 0, close: 24 }
+} [ 'Italian', 'Pizzeria', 'Vegetarian', 'Organic' ]
+[] [ 'Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad' ]
+*/
+
+// Mutating varia9bles
+let a = 111;
+let b = 999;
+const obj = { a: 23, b: 7, c: 14 };
+
+({ a, b } = obj); // Destructuring assignment in parenthesis because a & b are already declared
+console.log(a, b);
+
+// Nested objects
+const { fri: {open, close} } = openingHours;
+console.log(open, close);
+
+
+
+
+/*
 /////////////////////////////////////////////////////
 // lec--> 103 {Destructuring Arrays}
 //  Destructuring Arrays--> it is a way (ES6 feature) of unpacking values from an array or an object into seprate variables(Breaking complex dataStructure in smaller dataStructure)
@@ -70,3 +115,4 @@ console.log(i, j, k);
 const [p = 1, q = 1, r = 1] = [8, 9]; // when we don't know the actual size of array
 // (how many element an array have we don't know) this happens when we get data from API
 console.log(p, q, r);
+*/

@@ -48,6 +48,22 @@ const restaurant = {
 
 
 /////////////////////////////////////////
+// lec --> 107 {Short circuting}
+// Use ANY data type, return ANY data type, short circuting
+console.log(3 || "shubham");
+console.log('' || "rajan"); // or oprator simply return a truthy value
+console.log(true || 0);
+console.log(undefined || null);
+
+console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guests1);
+
+
+
+/*
+/////////////////////////////////////////
 // lec --> 106 (Rest Pattern Parameters)
 // Rest is to pack elements into an array 
 
@@ -86,8 +102,7 @@ add(...x);
 
 restaurant.orderPizza("mushrooms", 'onion', 'olives', 'spinach');
 restaurant.orderPizza("mushrooms");
-
-
+*/
 
 /*
 ///////////////////////////////////////

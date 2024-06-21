@@ -50,6 +50,7 @@ const restaurant = {
 /////////////////////////////////////////
 // lec --> 107 {Short circuting}
 // Use ANY data type, return ANY data type, short circuting
+console.log("----OR----");
 console.log(3 || "shubham");
 console.log('' || "rajan"); // or oprator simply return a truthy value
 console.log(true || 0);
@@ -57,10 +58,31 @@ console.log(undefined || null);
 
 console.log(undefined || 0 || '' || 'Hello' || 23 || null);
 
+restaurant.numGuests = 23; // restaurant.numGuests = 0; shouldn't be there as it make all expression an falsy value
 const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
 console.log(guests1);
 
+// practical example
+const guests2 = restaurant.numGuests || 10;
+console.log(guests2);
 
+// OR --> return the first truthy value of all the all operands, or simply the last element if all the element is falsy value
+console.log("----AND----");
+console.log(0 && "Jonas");
+console.log(5 && "Shubham");
+
+console.log("Hello" && 23 && null && "Jonas");
+
+// Practical example
+if (restaurant.orderPizza) {
+  restaurant.orderPizza('mushroom', 'spinach');
+};
+
+restaurant.orderPizza && restaurant.orderPizza('mushroom', 'spinach')
+// AND --> it return the first falsy value of all the operands, or the last value if all of them are truthy
+
+// practical application --> we can use the "or" operator to set default value,
+// and --> we can use to execute code of second operand if the frist operand is true
 
 /*
 /////////////////////////////////////////

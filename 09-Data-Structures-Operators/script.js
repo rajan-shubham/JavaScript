@@ -47,16 +47,31 @@ const restaurant = {
 };
 
 
+
+/*
+/////////////////////////////////////////
+// lec --> 108 Nullish Coalescing Operator (__)
+
+restaurant.numGuests = 0;
+console.log(restaurant);
+const guests = restaurant.numGuests || 10;
+console.log(guests); // 10
+
+// Nullish : null and undefined (Nullish Coalescing Operator it works with only nullish values, NOT Include 0 or '')
+const guestsCorrect = restaurant.numGuests ?? 10;
+console.log(guestsCorrect); // 0
+*/
+/*
 /////////////////////////////////////////
 // lec --> 107 {Short circuting}
 // Use ANY data type, return ANY data type, short circuting
 console.log("----OR----");
-console.log(3 || "shubham");
+console.log(3 || "shubham"); // 3
 console.log('' || "rajan"); // or oprator simply return a truthy value
-console.log(true || 0);
-console.log(undefined || null);
+console.log(true || 0); // true
+console.log(undefined || null); // null
 
-console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+console.log(undefined || 0 || '' || 'Hello' || 23 || null); // Hello
 
 restaurant.numGuests = 23; // restaurant.numGuests = 0; shouldn't be there as it make all expression an falsy value
 const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
@@ -68,10 +83,10 @@ console.log(guests2);
 
 // OR --> return the first truthy value of all the all operands, or simply the last element if all the element is falsy value
 console.log("----AND----");
-console.log(0 && "Jonas");
-console.log(5 && "Shubham");
+console.log(0 && "Jonas"); // 0
+console.log(5 && "Shubham"); // Shubhanm 
 
-console.log("Hello" && 23 && null && "Jonas");
+console.log("Hello" && 23 && null && "Jonas"); // null
 
 // Practical example
 if (restaurant.orderPizza) {
@@ -83,7 +98,7 @@ restaurant.orderPizza && restaurant.orderPizza('mushroom', 'spinach')
 
 // practical application --> we can use the "or" operator to set default value,
 // and --> we can use to execute code of second operand if the frist operand is true
-
+*/
 /*
 /////////////////////////////////////////
 // lec --> 106 (Rest Pattern Parameters)

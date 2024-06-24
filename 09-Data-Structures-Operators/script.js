@@ -46,6 +46,23 @@ const restaurant = {
   },
 };
 
+/*
+//////////////////////////////////////////
+// lec --> 110 {LoopingArrays_The for-of Loop}
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+for (const item of menu) console.log(item);
+
+for (const item of menu.entries()) {
+  console.log(`${item[0] + 1}: ${item[1]}`);
+};
+for (const [i, el] of menu.entries()) {
+  console.log(`${i + 1}: ${el}`);
+};
+
+// console.log([...menu.entries()]);
+*/
+/*
 const game = {
   team1: 'Bayern Munich',
   team2: 'Borrussia Dortmund',
@@ -86,7 +103,7 @@ const game = {
     team2: 6.5,
   },
 };
-
+*/
 ///////////////////////////////////////
 // Coding Challenge #1
 

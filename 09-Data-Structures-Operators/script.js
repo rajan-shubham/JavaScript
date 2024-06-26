@@ -4,7 +4,24 @@
 const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
 
-// Data needed for first part of the section
+const weekdays = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+
+  const openingHours = {
+    thu: {
+      open: 12,
+      close: 22,
+    },
+    // Remenber if we use the variable name as the property name, basically we use the bracket notation
+    [weekdays[4]]: {
+      open: 11,
+      close: 23,
+    },
+    [weekdays[4+1]]: { // or [`day-${2+4}`]
+      open: 0, // Open 24 hours
+      close: 12 + 12, // or close: 24
+    },
+};
+
 const restaurant = {
   name: 'Classico Italiano',
   location: 'Via Angelo Tavanti 23, Firenze, Italy',
@@ -12,23 +29,20 @@ const restaurant = {
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 
-  openingHours: {
-    thu: {
-      open: 12,
-      close: 22,
-    },
-    fri: {
-      open: 11,
-      close: 23,
-    },
-    sat: {
-      open: 0, // Open 24 hours
-      close: 24,
-    },
-    },
-    order: function (starterIndex, mainIndex) {
-        return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
-  },
+  // Older then ES6
+  // openingHours: openingHours,
+
+  // ES6 enhansed object literals(create a property name with exactly that variable name)
+  openingHours,
+
+  //   order: function (starterIndex, mainIndex) {
+  //       return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  // },
+
+  order(starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+},
+
   orderDelivery({ starterIndex = 1, mainIndex = 0, time = '20:00', address }) {
     console.log(
       `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
@@ -46,6 +60,72 @@ const restaurant = {
   },
 };
 
+
+//////////////////////////////////////////
+// lec --> 113 {Looping Objects-> Object keys, values, and Entries}
+// Property NAMES
+const properties = Object.keys(openingHours);
+console.log(properties);
+
+// console.log(`We are open on ${properties.length} days.`);
+// for (const day of Object.keys(openingHours)) {
+//   console.log(day);
+// }
+
+let openStr = `We are open on ${properties.length} days: `
+for (const day of properties) {
+  openStr += `${day}, `
+}
+console.log(openStr);
+
+// Properties VALUES
+const values = Object.values(openingHours);
+console.log(values); 
+
+// Entrie object
+const entries = Object.entries(openingHours);
+console.log(entries);
+
+// [key, value]
+for (const [day, { open, close }] of entries) {
+  console.log(`On ${day} we open at ${open} and close at ${close}.`);
+}
+
+/*
+//////////////////////////////////////////
+// lec --> 112 (Optional Chaining)
+if (restaurant.openingHours && restaurant.openingHours.mon)
+  console.log(restaurant.openingHours.mon.open);
+
+// console.log(restaurant.openingHours.mon.open);
+
+// WITH Optional Chaining
+console.log(restaurant.openingHours.mon?.open);
+console.log(restaurant.openingHours?.mon?.open);
+
+// Example
+const days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+
+for (const day of days) {
+  // console.log(day);
+  const open = restaurant.openingHours[day]?.open ?? "closed";
+  console.log(`On ${day}, we open at ${open}`);
+}
+
+// Method (if it exist before we call it)
+console.log(restaurant.order?.(0,1+1) ?? "Method does not exist");
+console.log(restaurant.orderRisotto?.(0,2) ?? "Method does not exist");
+
+// Array (basically we check it is empty)
+const users = [
+  { name: "Shubham", email: 'hello@shubham.in' }
+];
+
+console.log(users[0]?.name ?? "User array empty");
+
+if (users.length > 0) console.log(users[0].name);
+else console.log('User array empty');
+*/
 /*
 //////////////////////////////////////////
 // lec --> 110 {LoopingArrays_The for-of Loop}

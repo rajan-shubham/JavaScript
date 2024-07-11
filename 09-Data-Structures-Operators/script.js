@@ -61,6 +61,50 @@ const restaurant = {
 };
 
 ///////////////////////////////////////
+// lec --> 120 {Working with string (part-1)}
+const ariline = "TAP Air Portugal";
+const plane = "A320";
+
+console.log(plane[0]); // A
+console.log("B737"[0]); // B
+
+console.log(ariline.length); // 16
+console.log("B737".length); // 4
+
+console.log(ariline.indexOf("r")); // 6
+console.log(ariline.lastIndexOf("r")); // 10
+console.log(ariline.indexOf("Portugal")); // 8 (it is case scensitive)
+
+// these methods always return a new string
+console.log(ariline.slice(4)); // subString --> Air Portugal
+console.log(ariline.slice(4,7)); // Air (7 exclusive) {lengt of extracted is always (7 - 4) = 3}
+
+console.log(ariline.slice(0, ariline.indexOf(" ")));
+console.log(ariline.slice(ariline.lastIndexOf(" ") + 1));
+
+console.log(ariline.slice(-2));
+console.log(ariline.slice(1, -1));
+
+const checkMiddleSeat = function (seat) {
+  // B and E are middle seat
+  const s = seat.slice(-1)
+  if (s === "B" || s === "E")
+    console.log("You got the middle seat 😅");
+  else console.log("You got lucky 😎");
+}
+
+checkMiddleSeat("11B");
+checkMiddleSeat("23C");
+checkMiddleSeat("3E");
+// whenever we called string method, JS behind the scene convert string primitive to string object with the same content --> Boxing
+
+console.log(new String("jonas"));
+console.log(typeof new String("jonas"));
+// when operation is done string object is converted back to string primitive
+
+console.log(typeof new String("jonas").slice(1));
+
+///////////////////////////////////////
 // Coding Challenge #3
 
 /* 
@@ -73,7 +117,7 @@ Let's continue with our football betting app! This time, we have a map with a lo
       [FIRST HALF] 17: ⚽️ GOAL
 
 GOOD LUCK 😀
-*/
+*//*
 const gameEvents = new Map([
   [17, '⚽️ GOAL'],
   [36, '🔁 Substitution'],
@@ -109,7 +153,7 @@ console.log(
 
 for (let [minute, event] of gameEvents) {
   console.log(`[${minute <= 45 ? "FIRST" : "SECOND"} HALF] ${minute}: ${event}`);
-} // task(4)
+} // task(4)*/
 /*
 ////////////////////////////////////////////
 // lec --> 117 {Maps_Iteration}

@@ -60,6 +60,65 @@ const restaurant = {
   },
 };
 
+//////////////////////////////////////
+// lec -> 121 { Working with String part - 2}
+const ariline = "TAP Air Portugal";
+
+console.log(ariline.toLowerCase());
+console.log(ariline.toUpperCase());
+
+// Fix capitalization in Passenger name
+const passenger = 'jOnAS'; // Jonas
+const passengerLower = passenger.toLowerCase();
+const passengerCorrect = passengerLower[0].toUpperCase() + passengerLower.slice(1);
+console.log(passengerCorrect);
+
+// Comparing emails
+const email = "hello@jonas.io";
+const loginEmail = "  Hello@Jonas.Io \n";
+
+const lowerEmail = loginEmail.toLowerCase();
+const trimmedEmail = lowerEmail.trim();
+console.log(trimmedEmail);
+
+const normalizedEmail = loginEmail.toLowerCase().trim();
+console.log(normalizedEmail);
+console.log(email === normalizedEmail);
+
+// string replacing
+const priceGB = "288,97&";
+const priceUS = priceGB.replace("&", "$").replace(",", "."); // create new string not mutate original one // 288.97$
+console.log(priceUS);
+
+const announcement = "All passengers come to boarding door 23. Boarding door 23!";
+
+console.log(announcement.replaceAll("door", "gate"));
+console.log(announcement.replace(/door/g, "gate"));
+// regular expression -> /door/g (g is for global variable)
+
+// Booleans 
+const plane = "Airbus A320neo";
+console.log(plane.includes("A320"));
+console.log(plane.includes("Boeing"));
+console.log(plane.startsWith("Air"));
+
+if (plane.startsWith("Airbus") && plane.endsWith("neo")) {
+  console.log("Part of the NEW Airbus family");
+}
+
+// Practice exercise
+const checkBaggage = function (items) {
+  const baggage = items.toLowerCase();
+  if (baggage.includes("knife") || baggage.includes("gun")) {
+    console.log("You anr NOT allowed on board");
+  } else {
+    console.log("Welcome aboard");
+  }
+}
+checkBaggage("I have a laptop, some Food and a pocket Knife");
+checkBaggage("Socks and camera");
+checkBaggage("Got some snacks and a gun for protection");
+/*
 ///////////////////////////////////////
 // lec --> 120 {Working with string (part-1)}
 const ariline = "TAP Air Portugal";
@@ -103,7 +162,7 @@ console.log(typeof new String("jonas"));
 // when operation is done string object is converted back to string primitive
 
 console.log(typeof new String("jonas").slice(1));
-
+*/
 ///////////////////////////////////////
 // Coding Challenge #3
 

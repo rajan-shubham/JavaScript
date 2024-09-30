@@ -71,8 +71,8 @@ const currencies = new Map([
   ['GBP', 'Pound sterling'],
 ]);
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
-
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+/*
 /////////////////////////////////////////////////
 // lec --> 140 {simple Array Methods}
 let arr = ['a', 'b', 'c', 'd', 'e'];
@@ -105,3 +105,28 @@ console.log([...arr, ...arr2]); // same thing by array decomposition (spread ope
 
 // JOIN
 console.log(letters.join(" -> "));
+*/
+
+/////////////////////////////////////////
+// lec --> 141 Looping Arrays_ forEach
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// for (const movement of movements) {
+for (const [i, movement] of movements.entries()) {
+  if (movement > 0) {
+    console.log(`Movement ${i+1}: You deposited ${movement}`);
+  } else {
+    console.log(`Movement ${i+1}: You withdrew ${Math.abs(movement)}`);
+  }
+}
+
+console.log("---- FOREACH ----"); // forEach is a higher order function
+movements.forEach(function (move, i, arr) {
+  if (move > 0) {
+    console.log(`Movement ${i+1}: You deposited ${move}`);
+  } else {
+    console.log(`Movement ${i+1}: You withdrew ${Math.abs(move)}`);
+  }
+});
+
+//NOTE: in forEach loop => we can't use break; continue; statement
